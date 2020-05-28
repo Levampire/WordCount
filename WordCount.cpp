@@ -1,8 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include <ctype.h>
 #include <string.h>
-#include <assert.h>
+
 
 
 int countc(char *file) //返回文件的字符数 
@@ -18,12 +17,11 @@ int countc(char *file) //返回文件的字符数
     while (!feof(f))
     {
         a=fgetc(f);
-        if(a==' '||a=='\t'||a=='\n') 
+        if(a==' '||a=='\t'||a=='\n'||(a >= 'a'&&a <= 'z')||(a>='A'&&a<='Z')) 
         cchar++;
-        else
-        cchar++;
+       
     }
-    fclose(f);printf("Charnum:%d ",cchar-2);
+    fclose(f);printf("Charnum:%d ",cchar);
 }
 
 int countw(char *file)//返回文件词的数目 
