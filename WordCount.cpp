@@ -18,10 +18,9 @@ int countc(char *file) //返回文件的字符数
     while (!feof(f))
     {
         a=fgetc(f);
-        if(a==' '||a=='\t'||a=='\n') 
+        if(a==' '||a=='\t'||a=='\n'||(a >= 'a'&&a <= 'z')||(a>='A'&&a<='Z')) 
         cchar++;
-        else
-        cchar++;
+       
     }
     fclose(f);printf("Charnum:%d ",cchar-2);
 }
