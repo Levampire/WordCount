@@ -4,7 +4,7 @@
 
 
 
-int countc(char *file) //返回文件的字符数 
+int countc(char *file) //杩斿洖鏂囦欢鐨勫瓧绗︽暟 
 {   FILE *f;
     f = fopen(file, "r");
     int cchar=0;
@@ -24,7 +24,7 @@ int countc(char *file) //返回文件的字符数
     fclose(f);printf("Charnum:%d ",cchar);
 }
 
-int countw(char *file)//返回文件词的数目 
+int countw(char *file)//杩斿洖鏂囦欢璇嶇殑鏁扮洰 
 {   FILE *f;
     int aword=0,cword=1; 
     f=fopen(file,"r");
@@ -41,7 +41,7 @@ int countw(char *file)//返回文件词的数目
     
         	aword++;   
 		
-    else if (aword>1)
+    else if (aword>=1)
     {
                 cword++;
                 aword=0;
